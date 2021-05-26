@@ -1,5 +1,8 @@
 import {React} from 'react';
 import {Row, Col, Container, Accordion, Card} from "react-bootstrap";
+import {SideBarData} from "../Data/SidebarData";
+import '../styles/Sidebar.css';
+
 export const Sidebar = () => {
     return (
         <Container>
@@ -27,5 +30,29 @@ export const Sidebar = () => {
             </Card.Body>
         </Card>
         </Container>
+    );
+}
+
+export const SidebarBasic = () =>{
+    return (
+      <div className="Sidebar">
+        <ul className="SidebarList">
+          {SideBarData.map((value, key) => {
+            return (
+                <li
+                  key={key}
+                  onClick={()=>{
+                      window.location.pathname = value.link;
+                  }}
+                  className="row"
+                  id={window.location.pathname == value.link ? "active":""}
+                >
+                  <div id="icon">{value.icon}</div>
+                  <div id="title">{value.title}</div>
+                </li>
+            );    
+          })}
+        </ul>
+      </div>
     );
 }

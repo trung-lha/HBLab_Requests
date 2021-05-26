@@ -95,7 +95,7 @@ export const EmployeesTable = () => {
     }
 
     return (
-        <div>
+      <div>
         <Card border="light" className="table-wrapper table-responsive shadow-sm">
           <Card.Body className="pt-0">
             <Table hover className="user-table align-items-center">
@@ -142,7 +142,6 @@ export const EmployeesTable = () => {
             </Card.Footer>
           </Card.Body>
         </Card>
-
       </div>
     );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import {EmployeesMain} from '../components/Employees';
-import {Sidebar} from "../components/Sidebar";
+import {Sidebar, SidebarBasic} from "../components/Sidebar";
 import {Row, Col, Container} from "react-bootstrap";
 
 export const Employees = () => {
@@ -8,7 +8,8 @@ export const Employees = () => {
     <>
       <div className="mt-5">
         <Row>
-            <Col md={3}><Sidebar/></Col>
+            <Col md={3}><SidebarBasic/></Col>
+            
             <Col md={9}><EmployeesMain/></Col>
         </Row>
       </div>
