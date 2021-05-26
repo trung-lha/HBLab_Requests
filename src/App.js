@@ -1,12 +1,12 @@
 import './App.css';
 import { Sidebar } from "./components/Sidebar";
 import { Row, Col, Container, Accordion, Card } from "react-bootstrap";
-import {AddEmployeeForm, EmployeesTable, EmployeesMain} from './components/Employees';
+import {Employees} from "./pages/Employees";
 
 function App() {
   return (
     <>
-      <EmployeesMain/>
+      <Employees/>
     </>
   );
 }

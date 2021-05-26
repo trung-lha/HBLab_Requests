@@ -2,12 +2,13 @@ import {React} from 'react';
 import {Row, Col, Container, Accordion, Card} from "react-bootstrap";
 export const Sidebar = () => {
     return (
-        <>
-            <Row>
-                <Col md={{span: 3}}>
-                <Accordion defaultActiveKey="0">
-                    <Card>
-                        <Accordion.Toggle as={Card.Header} eventKey="0">
+        <Container>
+        <Card>
+            <Card.Header><h4>Sidebar Area</h4></Card.Header>
+            <Card.Body>
+            <Accordion defaultActiveKey="0">
+            <Card>
+                <Accordion.Toggle as={Card.Header} eventKey="0">
                         Click me!
                         </Accordion.Toggle>
                         <Accordion.Collapse eventKey="0">
@@ -22,9 +23,9 @@ export const Sidebar = () => {
                         <Card.Body>Hello! I'm another body</Card.Body>
                         </Accordion.Collapse>
                     </Card>
-                    </Accordion>
-                </Col>
-            </Row>
-        </>
+                </Accordion>
+            </Card.Body>
+        </Card>
+        </Container>
     );
 }
